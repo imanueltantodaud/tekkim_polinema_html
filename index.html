@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Program Studi Teknik Kimia POLINEMA</title>
+  <title>Teknik Kimia POLINEMA</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -11,128 +11,261 @@
     body {
       background-image: linear-gradient(to right top, #e0f2fe, #c7e0f6, #aed0ef, #95c0e7, #7bb0e0);
     }
-    section {
-      background-position: center;
-      background-size: cover;
+    .slider-wrapper {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 300%;
+    }
+    .slider-item {
+      min-width: 100%;
+      flex-shrink: 0;
+      flex: 0 0 100%;
+      height: 100%;
     }
   </style>
 </head>
-<body class="text-gray-900 font-sans transition duration-500 dark:bg-gray-900 dark:text-white">
+<body class="text-gray-900 font-sans dark:bg-gray-900 dark:text-white">
 
 <!-- Header -->
-<header class="bg-blue-800 text-white shadow sticky top-0 z-40">
+<header class="bg-blue-800 text-white sticky top-0 z-50 shadow">
   <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
     <div class="flex items-center gap-3">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Logo_Polinema.png" alt="Logo Polinema" class="h-10 w-10 bg-white p-1 rounded">
+      <div class="h-10 w-10 bg-gray-300 rounded"></div>
       <span class="text-xl font-semibold">Teknik Kimia POLINEMA</span>
     </div>
-    <nav class="space-x-4 hidden md:block">
-      <a href="#beranda" class="hover:underline"><i class="fas fa-home text-yellow-300"></i> Beranda</a>
-      <a href="#profil" class="hover:underline"><i class="fas fa-user text-pink-300"></i> Profil</a>
-      <a href="#akademik" class="hover:underline"><i class="fas fa-book text-green-300"></i> Akademik</a>
-      <a href="#fasilitas" class="hover:underline"><i class="fas fa-school text-red-300"></i> Fasilitas</a>
-      <a href="#kemahasiswaan" class="hover:underline"><i class="fas fa-users text-indigo-300"></i> Kemahasiswaan</a>
-      <a href="#galeri" class="hover:underline"><i class="fas fa-image text-blue-300"></i> Galeri</a>
-      <a href="#berita" class="hover:underline"><i class="fas fa-newspaper text-teal-300"></i> Berita</a>
-      <a href="#kontak" class="hover:underline"><i class="fas fa-envelope text-orange-300"></i> Kontak</a>
+    <nav class="hidden md:flex gap-4 text-sm">
+      <a href="#beranda" class="hover:underline">Beranda</a>
+      <a href="#profil" class="hover:underline">Profil</a>
+      <a href="#visimisi" class="hover:underline">Visi & Misi</a>
+      <a href="#organisasi" class="hover:underline">Organisasi</a>
+      <a href="#akademik" class="hover:underline">Akademik</a>
+      <a href="#fasilitas" class="hover:underline">Fasilitas</a>
+      <a href="#kemahasiswaan" class="hover:underline">Kemahasiswaan</a>
+      <a href="#prestasi" class="hover:underline">Prestasi</a>
+      <a href="#berita" class="hover:underline">Berita</a>
+      <a href="#kontak" class="hover:underline">Kontak</a>
     </nav>
   </div>
 </header>
 
-<!-- Profil Section -->
-<section id="profil" class="px-6 py-12 bg-gray-100 bg-opacity-90 dark:bg-gray-700" data-aos="fade-up">
-  <h2 class="text-2xl font-semibold mb-4">Profil Program Studi</h2>
-  <div class="md:flex md:items-center gap-6">
-    <div class="md:w-2/3 mb-6 md:mb-0">
-      <p class="mb-4">
-        Program Studi Teknik Kimia POLINEMA berkomitmen menghasilkan lulusan yang unggul di bidang teknologi proses, 
-        memiliki jiwa kewirausahaan, dan siap bersaing di dunia industri nasional maupun internasional.
-      </p>
-      <p class="mb-4">
-        Dilengkapi dengan fasilitas laboratorium lengkap, kurikulum berbasis OBE, dan kerjasama dengan berbagai industri kimia terkemuka,
-        mahasiswa dibekali kemampuan teknis dan soft skill yang holistik.
-      </p>
-    </div>
-    <div class="md:w-1/3">
-      <div class="overflow-x-auto whitespace-nowrap space-x-4 flex p-2 border rounded bg-white dark:bg-gray-800">
-        <div class="w-32 h-20 bg-gray-300 rounded flex-shrink-0"></div>
-        <div class="w-32 h-20 bg-gray-300 rounded flex-shrink-0"></div>
-        <div class="w-32 h-20 bg-gray-300 rounded flex-shrink-0"></div>
-        <div class="w-32 h-20 bg-gray-300 rounded flex-shrink-0"></div>
-        <div class="w-32 h-20 bg-gray-300 rounded flex-shrink-0"></div>
-      </div>
-      <p class="text-sm text-center mt-2 text-gray-600 dark:text-gray-300">Galeri mini: kegiatan dan fasilitas prodi</p>
+<!-- Hero / Beranda -->
+<section id="beranda" class="px-6 py-20 bg-gradient-to-r from-indigo-100 via-white to-blue-100 dark:from-gray-800 dark:to-gray-700 text-center" data-aos="fade-down">
+  <h1 class="text-4xl md:text-5xl font-bold gradient-title mb-4">Selamat Datang di Program Studi Teknik Kimia POLINEMA</h1>
+  <p class="mb-6 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto text-lg">Menghasilkan lulusan unggul yang kompeten dalam bidang teknologi proses dan siap bersaing di dunia industri global.</p>
+  <div class="slider-wrapper max-w-4xl mx-auto h-64 rounded-xl overflow-hidden shadow-xl bg-gray-300">
+    <div class="slider-track" id="slider-hero">
+      <div class="slider-item bg-gradient-to-br from-blue-200 to-indigo-300 flex items-center justify-center text-lg font-semibold">Kampus Hijau</div>
+      <div class="slider-item bg-gradient-to-br from-blue-300 to-indigo-400 flex items-center justify-center text-lg font-semibold">Laboratorium Modern</div>
+      <div class="slider-item bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-lg font-semibold">Prestasi Mahasiswa</div>
     </div>
   </div>
 </section>
 
-<!-- Akademik Section -->
-<section id="akademik" class="px-6 py-12 bg-white bg-opacity-90 dark:bg-gray-800" data-aos="fade-up">
-  <h2 class="text-2xl font-semibold mb-4">Informasi Akademik</h2>
-  <div class="grid md:grid-cols-2 gap-6">
+<!-- Profil Prodi (Zigzag) -->
+<section id="profil" class="px-6 py-20 bg-gradient-to-br from-green-100 via-white to-green-200 dark:from-gray-800 dark:to-gray-700" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     <div>
-      <h3 class="font-bold mb-2">Kurikulum Berbasis OBE</h3>
-      <p>Kurikulum disusun berdasarkan Outcome-Based Education untuk menjamin capaian lulusan yang kompeten dan siap kerja.</p>
+      <h2 class="text-4xl font-bold text-green-800 dark:text-green-300 mb-6">Profil Program Studi</h2>
+      <p class="mb-4 leading-relaxed text-lg text-gray-700 dark:text-gray-300">Program Studi Teknik Kimia merupakan bagian dari Jurusan Teknik Kimia di Politeknik Negeri Malang. Program ini dirancang untuk mencetak lulusan ahli madya dan sarjana terapan yang memiliki keahlian di bidang proses kimia, energi, dan manufaktur.</p>
+      <p class="leading-relaxed text-lg text-gray-700 dark:text-gray-300">Lulusan dibekali dengan kemampuan akademik dan praktis melalui kombinasi kuliah, laboratorium, proyek industri, serta magang kerja di perusahaan mitra.</p>
+    </div>
+    <div class="slider-wrapper h-72 rounded-xl overflow-hidden shadow-xl bg-gray-300">
+      <div class="slider-track" id="slider-profil">
+        <div class="slider-item bg-green-200 flex items-center justify-center text-lg font-semibold">Profil Mahasiswa</div>
+        <div class="slider-item bg-green-300 flex items-center justify-center text-lg font-semibold">Kolaborasi Industri</div>
+        <div class="slider-item bg-green-400 flex items-center justify-center text-lg font-semibold">Visi Terapan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visi Misi (Zigzag Reverse) -->
+<section id="visimisi" class="px-6 py-20 bg-gradient-to-tl from-yellow-100 via-white to-yellow-100 dark:from-gray-800 dark:to-gray-700" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="slider-wrapper h-72 rounded-xl overflow-hidden shadow-xl bg-gray-300">
+      <div class="slider-track" id="slider-visi">
+        <div class="slider-item bg-yellow-200 flex items-center justify-center text-lg font-semibold">Misi Pendidikan</div>
+        <div class="slider-item bg-yellow-300 flex items-center justify-center text-lg font-semibold">Misi Riset</div>
+        <div class="slider-item bg-yellow-400 flex items-center justify-center text-lg font-semibold">Misi Sosial</div>
+      </div>
     </div>
     <div>
-      <h3 class="font-bold mb-2">Struktur Kurikulum</h3>
-      <ul class="list-disc pl-5">
-        <li>Mata kuliah wajib & pilihan</li>
-        <li>Tugas akhir & skripsi</li>
-        <li>Kerja praktik & magang</li>
-        <li>Proyek mini & studi lapangan</li>
+      <h2 class="text-4xl font-bold text-yellow-800 dark:text-yellow-300 mb-6">Visi dan Misi</h2>
+      <h3 class="text-lg font-bold mb-2">Visi</h3>
+      <p class="mb-4 leading-relaxed text-lg text-gray-700 dark:text-gray-300">Menjadi program studi vokasi unggulan dalam bidang teknik kimia yang mendukung daya saing industri berbasis teknologi terapan.</p>
+      <h3 class="text-lg font-bold mb-2">Misi</h3>
+      <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+        <li>Menyelenggarakan pendidikan vokasi berbasis teknologi dan kebutuhan industri.</li>
+        <li>Mengembangkan penelitian terapan yang mendukung pengembangan industri kimia.</li>
+        <li>Melaksanakan pengabdian kepada masyarakat berbasis hasil penelitian terapan.</li>
+        <li>Membangun jejaring kerjasama dengan dunia industri, akademik, dan masyarakat.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- Galeri Section -->
-<section id="galeri" class="px-6 py-12 bg-gray-100 bg-opacity-90 dark:bg-gray-700" data-aos="fade-up">
-  <h2 class="text-2xl font-semibold mb-4">Galeri Kegiatan Mahasiswa</h2>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <img src="https://source.unsplash.com/400x300/?chemical-lab" alt="Lab Kimia" class="rounded shadow">
-    <img src="https://source.unsplash.com/400x300/?students" alt="Mahasiswa" class="rounded shadow">
-    <img src="https://source.unsplash.com/400x300/?research" alt="Penelitian" class="rounded shadow">
-    <img src="https://source.unsplash.com/400x300/?graduation" alt="Wisuda" class="rounded shadow">
-  </div>
-</section>
-
-<!-- Testimoni Section -->
-<section class="px-6 py-12 bg-white bg-opacity-90 dark:bg-gray-800" data-aos="fade-up">
-  <h2 class="text-2xl font-semibold mb-4">Testimoni Alumni</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded shadow">
-      <p class="italic">"Pengalaman saya di Teknik Kimia POLINEMA luar biasa. Saya mendapatkan banyak ilmu dan jaringan profesional."</p>
-      <p class="mt-2 font-bold">- Dwi Lestari, Alumni 2021</p>
+<!-- Akademik (Zigzag Normal) -->
+<section id="akademik" class="px-6 py-20 bg-gradient-to-br from-pink-100 via-white to-pink-100 dark:from-gray-800 dark:to-gray-700" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-4xl font-bold text-pink-800 dark:text-yellow-300 mb-6">Akademik</h2>
+      <p class="mb-4 leading-relaxed text-lg text-gray-700 dark:text-gray-300">
+        Kurikulum Teknik Kimia dirancang berbasis Outcome-Based Education (OBE) dengan kolaborasi industri, 
+        memastikan lulusan adaptif dan siap kerja. Materi difokuskan pada proses kimia, inovasi teknologi, dan penguatan soft skill.
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+        <li>Kurikulum 2024-2028 dengan capaian pembelajaran terukur</li>
+        <li>Mata kuliah unggulan: Proses Industri, Bioproses, Energi Terbarukan</li>
+        <li>Program magang industri, sertifikasi, dan rekognisi mitra</li>
+        <li>Proyek akhir berbasis riset kolaboratif dan multidisiplin</li>
+      </ul>
     </div>
-    <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded shadow">
-      <p class="italic">"Fasilitas dan dosen di prodi ini sangat mendukung. Saya merasa siap menghadapi dunia industri."</p>
-      <p class="mt-2 font-bold">- Budi Santoso, Alumni 2022</p>
-    </div>
-    <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded shadow">
-      <p class="italic">"Program studi ini mengajarkan saya lebih dari sekedar teori, tapi juga praktik nyata di lapangan."</p>
-      <p class="mt-2 font-bold">- Sari Puspita, Alumni 2023</p>
+    <div class="slider-wrapper h-72 rounded-xl overflow-hidden shadow-xl bg-gray-300">
+      <div class="slider-track" id="slider-akademik">
+        <div class="slider-item bg-pink-200 flex items-center justify-center text-lg font-semibold">Kelas Interaktif</div>
+        <div class="slider-item bg-yellow-200 flex items-center justify-center text-lg font-semibold">Laboratorium Proses</div>
+        <div class="slider-item bg-orange-200 flex items-center justify-center text-lg font-semibold">Sertifikasi Industri</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
-<section class="px-6 py-12 bg-gray-100 bg-opacity-90 dark:bg-gray-700 text-center" data-aos="fade-up">
-  <h2 class="text-2xl font-semibold mb-4">Tertarik Bergabung?</h2>
-  <p class="mb-6">Unduh brosur kami atau hubungi kami untuk informasi lebih lanjut.</p>
+<!-- Fasilitas -->
+<section id="fasilitas" class="px-6 py-20 bg-gradient-to-l from-green-100 via-white to-green-100 dark:from-gray-700 dark:to-gray-800" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="slider-wrapper h-72 rounded-xl overflow-hidden shadow-xl bg-gray-300">
+      <div class="slider-track" id="slider-fasilitas">
+        <div class="slider-item bg-green-200 flex items-center justify-center text-lg font-semibold">Lab Teknik Kimia</div>
+        <div class="slider-item bg-blue-400 flex items-center justify-center text-lg font-semibold">Ruang Komputer</div>
+        <div class="slider-item bg-red-500 flex items-center justify-center text-lg font-semibold">Workshop & Pilot Plant</div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-4xl font-bold text-green-800 dark:text-green-300 mb-6">Fasilitas</h2>
+      <p class="mb-4 leading-relaxed text-lg">Fasilitas modern dan lengkap tersedia untuk mendukung pembelajaran teoritis dan praktis. Mahasiswa dapat mengakses berbagai laboratorium, ruang inovasi, hingga fasilitas digital learning.</p>
+      <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+        <li>Laboratorium Proses Kimia, Bioproses, Instrumentasi</li>
+        <li>Smart Classroom & Virtual Simulation Room</li>
+        <li>Pusat Kewirausahaan & Riset Mahasiswa</li>
+        <li>Perpustakaan Digital & Repository Ilmiah</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Kemahasiswaan -->
+<section id="kemahasiswaan" class="px-6 py-20 bg-gradient-to-br from-purple-100 via-white to-purple-200 dark:from-gray-800 dark:to-gray-700" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-4xl font-bold text-purple-800 dark:text-purple-300 mb-6">Kemahasiswaan</h2>
+      <p class="mb-4 leading-relaxed text-lg">Pengembangan karakter dan soft skill menjadi pilar penting melalui kegiatan kemahasiswaan. Prodi mendorong mahasiswa aktif di organisasi, kompetisi, dan kegiatan sosial berbasis masyarakat.</p>
+      <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+        <li>HMTK aktif dalam pengembangan minat bakat</li>
+        <li>Unit kegiatan: English Club, Chemistry Art, dan Robotika</li>
+        <li>Program Kreativitas Mahasiswa (PKM), Lomba Inovasi</li>
+        <li>Leadership Camp, Social Project & Technocamp</li>
+      </ul>
+    </div>
+    <div class="slider-wrapper h-72 rounded-xl overflow-hidden shadow-xl bg-gray-300">
+      <div class="slider-track" id="slider-kemahasiswaan">
+        <div class="slider-item bg-purple-300 flex items-center justify-center text-lg font-semibold">Organisasi Mahasiswa</div>
+        <div class="slider-item bg-pink-300 flex items-center justify-center text-lg font-semibold">PKM & Lomba</div>
+        <div class="slider-item bg-yellow-300 flex items-center justify-center text-lg font-semibold">Leadership Camp</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Galeri -->
+<section id="galeri" class="px-6 py-20 bg-gradient-to-tr from-pink-100 via-white to-indigo-100 dark:from-gray-800 dark:to-gray-700" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-pink-800 dark:text-pink-300 mb-10 text-center">Galeri Kegiatan</h2>
+    <div class="slider-wrapper h-80 rounded-xl overflow-hidden shadow-xl bg-gray-300">
+      <div class="slider-track" id="slider-galeri">
+        <div class="slider-item bg-gray-300 flex items-center justify-center text-lg font-semibold">Kegiatan Laboratorium</div>
+        <div class="slider-item bg-gray-400 flex items-center justify-center text-lg font-semibold">Workshop Industri</div>
+        <div class="slider-item bg-gray-500 flex items-center justify-center text-lg font-semibold">Kegiatan Mahasiswa</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimoni -->
+<section id="testimoni" class="px-6 py-20 bg-gradient-to-br from-sky-100 via-white to-blue-100 dark:from-gray-800 dark:to-gray-700" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-blue-800 dark:text-blue-300 mb-10 text-center">Testimoni Alumni</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
+        <p class="italic mb-4">"Saya sangat bersyukur menjadi bagian dari Teknik Kimia POLINEMA. Bekal ilmu dan pengalaman yang saya dapat sangat membantu di dunia kerja."</p>
+        <p class="font-bold text-blue-700 dark:text-blue-300">- Andi Pratama, Alumni 2020</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
+        <p class="italic mb-4">"Kurikulum dan dosennya sangat mendukung perkembangan karier saya sebagai engineer di perusahaan multinasional."</p>
+        <p class="font-bold text-blue-700 dark:text-blue-300">- Maria Lestari, Alumni 2021</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
+        <p class="italic mb-4">"Fasilitas lengkap dan budaya akademik di POLINEMA memberikan saya keunggulan kompetitif."</p>
+        <p class="font-bold text-blue-700 dark:text-blue-300">- Rizky Saputra, Alumni 2022</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Berita Terbaru -->
+<section id="berita" class="px-6 py-20 bg-gradient-to-tl from-orange-100 via-white to-yellow-100 dark:from-gray-800 dark:to-gray-700" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-orange-800 dark:text-yellow-300 mb-10 text-center">Berita Terbaru</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
+        <h3 class="font-semibold text-lg mb-2">Kunjungan Industri ke PT. Petrokimia</h3>
+        <p class="text-sm">Mahasiswa Teknik Kimia mengunjungi pabrik pupuk terbesar di Indonesia untuk melihat langsung proses produksi.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
+        <h3 class="font-semibold text-lg mb-2">Tim Prodi Juara PKM Nasional</h3>
+        <p class="text-sm">Tim mahasiswa meraih prestasi di ajang Pekan Kreativitas Mahasiswa kategori GFT 2025.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
+        <h3 class="font-semibold text-lg mb-2">Seminar Nasional Energi Terbarukan</h3>
+        <p class="text-sm">Dosen dan mahasiswa berpartisipasi sebagai pemateri dan peserta dalam seminar energi skala nasional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kontak & Lokasi -->
+<section id="kontak" class="px-6 py-20 bg-gradient-to-r from-gray-100 via-white to-gray-200 dark:from-gray-800 dark:to-gray-900" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-6">Kontak Kami</h2>
+      <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+        <li><strong>Alamat:</strong> Jl. Soekarno Hatta No.9, Malang</li>
+        <li><strong>Email:</strong> tekkim@polinema.ac.id</li>
+        <li><strong>Telepon:</strong> (0341) 404424 ext. 410</li>
+      </ul>
+    </div>
+    <div>
+      <iframe class="w-full h-72 rounded shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.6473540433775!2d112.61489411533178!3d-7.939928894281994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78828f97a8a9a7%3A0x7b25cf4a6b43c57a!2sPoliteknik%20Negeri%20Malang!5e0!3m2!1sen!2sid!4v1620197412103!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="px-6 py-20 bg-gradient-to-r from-indigo-100 via-white to-blue-100 dark:from-gray-800 dark:to-gray-700 text-center" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-indigo-800 dark:text-indigo-300 mb-6">Bergabunglah Bersama Kami!</h2>
+  <p class="mb-6 text-lg">Dapatkan pendidikan terbaik dan pengalaman luar biasa di Teknik Kimia POLINEMA. Unduh brosur atau hubungi kami untuk informasi lebih lanjut.</p>
   <div class="flex flex-col md:flex-row gap-4 justify-center">
-    <a href="#" class="bg-blue-700 text-white px-6 py-3 rounded shadow hover:bg-blue-900 transition">Unduh Brosur</a>
+    <a href="#" class="bg-indigo-700 text-white px-6 py-3 rounded shadow hover:bg-indigo-900 transition">Unduh Brosur</a>
     <a href="#kontak" class="bg-green-600 text-white px-6 py-3 rounded shadow hover:bg-green-800 transition">Hubungi Kami</a>
   </div>
 </section>
 
-<!-- Floating Contact -->
-<a href="https://wa.me/6281234567890" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50" title="Hubungi via WhatsApp">
-  <i class="fab fa-whatsapp text-2xl"></i>
-</a>
-
 <!-- Footer -->
-<footer class="bg-blue-900 text-white px-6 py-8 mt-12">
+<footer class="bg-blue-900 text-white px-6 py-10">
   <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
     <div>
       <h3 class="font-semibold mb-2">Alamat</h3>
@@ -141,16 +274,17 @@
       <p>Telepon: (0341) 404424 ext 410</p>
     </div>
     <div>
-      <h3 class="font-semibold mb-2">Tautan Penting</h3>
-      <ul>
+      <h3 class="font-semibold mb-2">Navigasi</h3>
+      <ul class="space-y-1">
         <li><a href="#akademik" class="hover:underline">Akademik</a></li>
-        <li><a href="#galeri" class="hover:underline">Galeri</a></li>
+        <li><a href="#fasilitas" class="hover:underline">Fasilitas</a></li>
+        <li><a href="#kemahasiswaan" class="hover:underline">Kemahasiswaan</a></li>
         <li><a href="#berita" class="hover:underline">Berita</a></li>
         <li><a href="#kontak" class="hover:underline">Kontak</a></li>
       </ul>
     </div>
     <div>
-      <h3 class="font-semibold mb-2">Ikuti Kami</h3>
+      <h3 class="font-semibold mb-2">Media Sosial</h3>
       <div class="flex space-x-4">
         <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-facebook fa-lg"></i></a>
         <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram fa-lg"></i></a>
@@ -161,7 +295,28 @@
   <div class="mt-8 text-center text-sm">&copy; 2025 Teknik Kimia POLINEMA. All rights reserved.</div>
 </footer>
 
+<script>
+  function startSlider(id) {
+    const container = document.getElementById(id);
+    let index = 0;
+    const slides = container.children.length;
+    setInterval(() => {
+      container.style.transform = `translateX(-${index * 100}%)`;
+      container.style.transition = 'transform 1s ease';
+      index = (index + 1) % slides;
+    }, 5000);
+  }
+
+  startSlider("slider-hero");
+  startSlider("slider-profil");
+  startSlider("slider-visi");
+  startSlider("slider-organisasi");
+  startSlider("slider-akademik");
+  startSlider("slider-fasilitas");
+  startSlider("slider-kemahasiswaan");
+  startSlider("slider-galeri");
+</script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ duration: 1000 });</script>
+<script>AOS.init({ duration: 500, once: true });</script>
 </body>
 </html>
